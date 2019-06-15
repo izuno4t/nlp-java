@@ -149,6 +149,8 @@ fabric.properties
 # *.iml
 modules.xml
 .idea/misc.xml
+.idea/compiler.xml
+.idea/encodings.xml
 *.ipr
 
 # Sonarlint plugin
