@@ -50,6 +50,9 @@ public class Example1 {
         System.out.println(Arrays.asList(lemmas));
 
 
+        // 係り受け形跡
+
+
     }
 
 }
