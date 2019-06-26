@@ -1,4 +1,4 @@
-package com.example.nlp.opennlp;
+package com.example.nlp.stanford;
 
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.ie.util.RelationTriple;
