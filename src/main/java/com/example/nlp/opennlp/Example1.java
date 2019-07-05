@@ -7,10 +7,12 @@ import opennlp.tools.postag.POSTaggerME;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
+import org.apache.commons.io.FileUtils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 public class Example1 {
@@ -22,7 +24,7 @@ public class Example1 {
         TokenizerModel model = new TokenizerModel(modelIn);
         Tokenizer tokenizer = new TokenizerME(model);
 
-        String message = "By building a sense of one word’s proximity to other similar words, which do not necessarily contain the same letters, we have moved beyond hard tokens to a smoother and more general sense of meaning.";
+        String message = FileUtils.readFileToString(ResourceUtil.getResource("input.txt").toFile(), StandardCharsets.UTF_8);
         String[] morphemes = tokenizer.tokenize(message);
 
         System.out.println("分かち書き");
